@@ -1,66 +1,49 @@
 function createMenu() {
     const content = document.querySelector('#content');
+    
+    const title = document.createElement('h2');
+    title.innerHTML = 'Menu';
+    
+    const menu = document.createElement('div');
 
-    const drinks = document.createElement('div');
-    drinks.id = drinks;
+    // add drinks + header to menu
+    const drinksTitle = document.createElement('h3');
+    drinksTitle.innerHTML = 'Drinks';
+    menu.appendChild(drinksTitle);
 
-    const drinksHeader = document.createElement('h3');
-    drinksHeader.innerHTML = 'Drinks';
+    const drinksList = document.createElement('ul');
+    drinksList.innerHTML = "";
+    drinksList.innerHTML += `
+    <li>Espresso: $5.00</li>
+    <li>Latte: $5.00</li>
+    <li>Cappuccino: $10.00</li>
+    <li>Hot Chocolate: $5.00</li>
+    <li>Lemon Tea: $5.00</li>
+    <li>Green Tea: $10.00</li>
+    `;
+    menu.appendChild(drinksList);
 
-    drinks.appendChild(drinksHeader);
 
-    const drinkList = document.createElement('ul');
-
-    function createItem(item, price) {
-        const item = document.createElement('li');
-        item.innerHTML = `${item}: $${price}`;
-    }
-
-    const espresso = createItem('Espresso', 5.00);
-    const latte = createItem('Latte', 5.00);
-    const cappuccino = createItem('Cappuccino', 10.00);
-    const hot_chocolate = createItem('Hot Chocolate', 5.00);
-    const lemon_tea = createItem('Lemon Tea', 5.00);
-    const green_tea = createItem('Green Tea', 10.00);
-
-    drinkList.appendChild(espresso);
-    drinkList.appendChild(latte);
-    drinkList.appendChild(lemon_tea);
-    drinkList.appendChild(hot_chocolate);
-    drinkList.appendChild(cappuccino);
-    drinkList.appendChild(green_tea);
-
-    drinks.append(drinkList);
-
-    const desserts = document.createElement('div');
-    desserts.id = 'desserts';
-
-    const dessertsHeader = document.createElement('h3');
-    dessertsHeader.innerHTML = 'Desserts';
-
-    desserts.appendChild(dessertsHeader);
+    // add desserts + title to menu
+    const dessertsTitle = document.createElement('h3');
+    dessertsTitle.innerHTML = 'Desserts'
+    menu.appendChild(dessertsTitle);    
 
     const dessertsList = document.createElement('ul');
+    dessertsList.innerHTML = "";
+    dessertsList.innerHTML += `
+    <li>Brownies: $5.00</li>
+    <li>Cinnamon Roll: $5.00</li>
+    <li>Croissant: $5.00</li>
+    <li>Lemon Pie: $5.00</li>
+    <li>Blueberry Muffin: $10.00</li>
+    <li>Chocolate Muffin: $10.00</li>
+    `;
+    menu.appendChild(dessertsList);
 
-    const brownies = createItem('Brownies', 5.00);
-    const cinnamon_roll = createItem('Cinnamon Roll', 5.00);
-    const croissant = createItem('Croissant', 5.00);
-    const lemon_pie = createItem('Lemon Pie', 5.00);
-    const blueberry_muffin = createItem('Blueberry Muffin', 10.00);
-    const chocolate_muffin = createItem('Chocolate Muffin', 10.00);
-
-    dessertsList.appendChild(brownies);
-    dessertsList.appendChild(cinnamon_roll);
-    dessertsList.appendChild(croissant);
-    dessertsList.appendChild(lemon_pie);
-    dessertsList.appendChild(blueberry_muffin);
-    dessertsList.appendChild(chocolate_muffin);
-
-    desserts.appendChild(dessertsList);
-
-    content.appendChild(drinks);
-    content.appendChild(desserts);
+    content.appendChild(menu);
 
 };
+
 
 export default createMenu;
