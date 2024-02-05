@@ -5,6 +5,7 @@ function createHome() {
 
     const homePage = document.createElement('div');
     homePage.classList.add('active');
+    homePage.id = 'homepage-body';
 
     const img = new Image();
     img.src = Cafe;

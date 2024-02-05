@@ -1,13 +1,14 @@
 function createMenu() {
     const content = document.querySelector('#content');
 
+    const menu = document.createElement('div');
+    menu.classList.add('active');
+    menu.id = 'menu-body';
+
     const title = document.createElement('h2');
     title.innerHTML = 'Menu';
     
     menu.appendChild(title);
-
-    const menu = document.createElement('div');
-    menu.classList.add('active');
 
     // add drinks + header to menu
     const drinksTitle = document.createElement('h3');

@@ -3,6 +3,7 @@ function createAbout() {
 
     const aboutContainer = document.createElement('div');
     aboutContainer.classList.add('active');
+    aboutContainer.id = 'about-body';
 
     const title = document.createElement('h2');
     title.innerHTML = 'About';

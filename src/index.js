@@ -6,13 +6,20 @@ import createAbout from "./modules/about";
 function init() {
     buttonEvents();
     pageOnLoad();
+    createHome();
 };
 
 function buttonEvents() {
 
+  function clearBody() {
+    const content = document.getElementById('content');
+    content.innerHTML = "";
+  }
+
     document.addEventListener("click", function(e){
         const target = e.target.closest("#home"); 
         if(target){
+          clearBody();
           createHome();
         }
       });
@@ -20,6 +27,7 @@ function buttonEvents() {
       document.addEventListener("click", function(e){
         const target = e.target.closest("#menu"); 
         if(target){
+          clearBody();
           createMenu();
         }
       });
@@ -27,10 +35,10 @@ function buttonEvents() {
       document.addEventListener("click", function(e){
         const target = e.target.closest("#about"); 
         if(target){
+          clearBody();
           createAbout();
         }
       });
-
 
 }
 
