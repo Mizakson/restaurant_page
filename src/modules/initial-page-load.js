@@ -3,6 +3,22 @@ function pageOnLoad() {
     const bodyEl = document.querySelector('body');
 
     const header = document.createElement('header');
+    
+    const projTitle = document.createElement('h1');
+    projTitle.innerHTML = 'Restaurant Page Project';
+
+    const projDesc = document.createElement('div');
+
+    const projNum = document.createElement('h3');
+    projNum.innerHTML = 'Odin Project JavaScript Course Project #3';
+
+    const projAuthor = document.createElement('p');
+    projAuthor.innerHTML = 'A program by Mizakson';
+
+    projDesc.appendChild(projNum);
+    projDesc.appendChild(projAuthor);
+
+    header.appendChild(projDesc);
 
     const nav = document.createElement('nav');
 
@@ -25,6 +41,11 @@ function pageOnLoad() {
     header.appendChild(nav);
 
     bodyEl.appendChild(header);
+
+    const content = document.createElement('div');
+    content.id = 'content'; 
+
+    bodyEl.appendChild(content);
 };
 
 export default pageOnLoad;

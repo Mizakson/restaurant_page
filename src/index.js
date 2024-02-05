@@ -7,13 +7,27 @@ function init() {
 };
 
 function buttonEvents() {
-    const homeBtn = document.getElementById('home');
-    const menuBtn = document.getElementById('menu');
-    const aboutBtn = document.getElementById('about');
 
-    homeBtn.addEventListener('click', createHome);
-    // menuBtn.addEventListener('click', )
-    // aboutBtn.addEventListener('click', )
+    document.addEventListener("click", function(e){
+        const target = e.target.closest("#home"); 
+        if(target){
+          createHome();
+        }
+      });
+
+    //   document.addEventListener("click", function(e){
+    //     const target = e.target.closest("#menu"); 
+    //     if(target){
+    //       createMenu();
+    //     }
+    //   });
+
+    //   document.addEventListener("click", function(e){
+    //     const target = e.target.closest("#about"); 
+    //     if(target){
+    //       createAbout();
+    //     }
+    //   });
 
 }
 
