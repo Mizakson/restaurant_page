@@ -1,8 +1,9 @@
 import createHome from "./modules/home";
+import pageOnLoad from "./modules/initial-page-load";
 
 function init() {
     buttonEvents();
-    createHome();
+    pageOnLoad();
 };
 
 function buttonEvents() {
