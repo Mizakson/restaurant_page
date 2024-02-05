@@ -4,6 +4,8 @@ function createMenu() {
     const title = document.createElement('h2');
     title.innerHTML = 'Menu';
     
+    content.appendChild(title);
+
     const menu = document.createElement('div');
 
     // add drinks + header to menu
