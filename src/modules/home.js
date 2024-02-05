@@ -1,7 +1,7 @@
 import Cafe from './cafe.jpg';
 
 function createHome() {
-    const container = document.querySelector('#content');
+    const content = document.querySelector('#content');
 
     const homePage = document.createElement('div');
     homePage.classList.add('active');
@@ -19,7 +19,7 @@ function createHome() {
     homePage.appendChild(img);
     homePage.appendChild(description);
 
-    container.appendChild(homePage);
+    content.appendChild(homePage);
 
 }
 
