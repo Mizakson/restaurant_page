@@ -1,10 +1,13 @@
 function createAbout() {
     const content = document.querySelector('#content');
 
+    const aboutContainer = document.createElement('div');
+    aboutContainer.classList.add('active');
+
     const title = document.createElement('h2');
     title.innerHTML = 'About';
 
-    content.appendChild(title);
+    aboutContainer.appendChild(title);
 
     const description = document.createElement('p');
     description.innerHTML = `Central Cafe is a quaint cafe located at the heart of Central City. <br>
@@ -17,7 +20,9 @@ function createAbout() {
     Thanks again for stopping by Central Cafe! 
     `;
 
-    content.appendChild(description);
+    aboutContainer.appendChild(description);
+
+    content.appendChild(aboutContainer);
 
 };
 
