@@ -22,3 +22,5 @@ function createHome() {
     container.appendChild(homePage);
 
 }
+
+export default createHome;
