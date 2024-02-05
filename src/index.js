@@ -1,5 +1,6 @@
 import createHome from "./modules/home";
 import pageOnLoad from "./modules/initial-page-load";
+import createMenu from "./modules/menu";
 
 function init() {
     buttonEvents();
@@ -15,12 +16,12 @@ function buttonEvents() {
         }
       });
 
-    //   document.addEventListener("click", function(e){
-    //     const target = e.target.closest("#menu"); 
-    //     if(target){
-    //       createMenu();
-    //     }
-    //   });
+      document.addEventListener("click", function(e){
+        const target = e.target.closest("#menu"); 
+        if(target){
+          createMenu();
+        }
+      });
 
     //   document.addEventListener("click", function(e){
     //     const target = e.target.closest("#about"); 

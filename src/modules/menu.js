@@ -61,4 +61,6 @@ function createMenu() {
     content.appendChild(drinks);
     content.appendChild(desserts);
 
-}
+};
+
+export default createMenu;
