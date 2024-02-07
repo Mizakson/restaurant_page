@@ -1,7 +1,49 @@
-.active {
-    display: block;
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: darkcyan;
+    color: white;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 45px;
+}
+
+nav {
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+#content{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+    justify-content: center;
+}
+
+.active > h1, p, h2, h3 {
+    text-align: center;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+    padding: 25px;
+    border-radius: 15px;
 }
 
 .inactive {
     display: none;
+}
+
+ul {
+    list-style: none;
 }
